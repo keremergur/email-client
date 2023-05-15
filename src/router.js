@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import InboxPage from './pages/InboxPage.vue';
+import EmailList from './components/email/EmailList.vue';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', redirect: '/view' },
         { path: '/auth', component: null },
-        { path: '/view', component: InboxPage },
+        { path: '/view', component: EmailList },
         { path: '/inbox', alias: '/view?page=inbox' },
         { path: '/important', alias: '/view?page=important' },
         { path: '/starred', alias: '/view?page=starred' },
